@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="TrocaPalavras.css">
+        <title>Troca Palavras</title>
+    </head>
+    <body>
+        <center>
+            <fieldset>
+                <div class="caixaFilmes">
+                    <h1>Bem vindo ao jogo dos Filmes!</h1>
+
+                    <h5>Troque uma palavra do nome dos filmes e veja o que acontece!</h5>
+
+                
+                        <p class="filmesNomes">"A hora do <strong id="filme1">Rush"</strong></p>
+                        <p class="filmesNomes">"O <strong id="filme2">Mágico</strong> de OZ"</p>
+                        <p class="filmesNomes">"11 homens e um <strong id="filme3">segredo"</strong></p>
+                        <p class="filmesNomes"><strong id="filme4">Planeta</strong> dos Macacos"</p>
+                        <p class="filmesNomes">"Procurando <strong id="filme5">Nemo"</strong></p>              
+                
+                    <div class="areaInputs">
+                        <input class="palavraDigitada" type="text" id="palavra" placeholder="Digite uma palavra" required/> 
+                        <button class="trocarPalavraButton" onclick="trocar()" id="começo">Trocar Palavras</button>
+                    </div>
+            </fieldset>
+        </center>
+        <script src="TrocaPalavras.js"></script>
+    </body>
+</html>

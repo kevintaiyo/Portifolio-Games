@@ -1,0 +1,44 @@
+body{
+    align-items: center;
+    justify-content: center;
+}
+
+.game{
+    width: 700px;
+    height: 800px;
+    background-color: #000 ;
+    margin: 0 auto;
+    border-radius: 1em;
+    position: relative;
+    top: 20%;
+}
+
+.nave{
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+}
+
+.div-pontuacao{
+    background-color: #D8CCE6;
+    padding: 20px;
+    border-radius: 10px
+}
+
+/* Animação para asteroides */
+
+.stone{
+    animation: stone-animation 2s infinite linear;
+    top: -80px;
+    top: 0;
+}
+
+@keyframes stone-animation{
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translatey(1000%);
+    }
+}
