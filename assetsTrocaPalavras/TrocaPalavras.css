@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 
 body{
     flex-direction: column;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     background-color: #2E3532;
 }
 

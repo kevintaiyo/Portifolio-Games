@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /* MEU CSS */
 body{
   background-color: #000;
   color: #fff;
-  font-family: "Bruno Ace SC";
+  font-family: 'Press Start 2P', cursive;
 }
 .titulo, footer{
  padding-top: 100px;

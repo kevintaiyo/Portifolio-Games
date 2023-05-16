@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body{
     background: rgb(113, 181, 224);
     margin: 0;
+    font-family: 'Press Start 2P', cursive;
 }
 
 button{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #050505;
     padding: 10px 20px;
@@ -36,7 +37,6 @@ button:disabled{
 #titulo{
     text-align: center;
     margin: 40px auto;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 40px; text-transform: uppercase;
     color: #fff;
 }
