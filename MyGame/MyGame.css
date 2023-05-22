@@ -1,46 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-body{
-    align-items: center;
-    justify-content: center;
-    font-family: 'Press Start 2P', cursive;
-}
 
-.game{
-    width: 700px;
-    height: 800px;
-    background-color: #000 ;
-    margin: 0 auto;
-    border-radius: 1em;
-    position: relative;
-    top: 20%;
-}
-
-.nave{
+.apple{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border-radius: 25px;
     position: absolute;
-    width: 80px;
-    bottom: 0;
-}
-
-.div-pontuacao{
-    background-color: #D8CCE6;
-    padding: 20px;
-    border-radius: 10px
-}
-
-/* Animação para asteroides */
-
-.stone{
-    animation: stone-animation 2s infinite linear;
-    top: -80px;
-    top: 0;
-}
-
-@keyframes stone-animation{
-    0%{
-        transform: translateY(-100%);
-    }
-
-    100%{
-        transform: translatey(1000%);
-    }
 }
