@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+body{
+    background-image: url(imgsMyGame/FundodeGrama.jpeg) no-repeat;
+}
 
+.botaoIniciar{
+  
+}
 
 .apple {
   width:6em;
@@ -11,6 +17,11 @@
   position:absolute;
   top: 1em;
   left:0.3em;
+  cursor: crosshair;
+}
+
+cursor::backdrop{
+  color: #cc1022;
 }
 
 .apple:before {
