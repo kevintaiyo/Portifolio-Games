@@ -2,10 +2,15 @@
 
 body{
     background-image: url(imgsMyGame/FundodeGrama.jpeg) no-repeat;
+    font-family: 'Press Start 2P', cursive;
 }
 
-.botaoIniciar{
-  
+.caixaPontuacao
+
+.buttonStart{
+  position:absolute;
+  top: 500px;
+  right:923px;
 }
 
 .apple {
@@ -18,10 +23,6 @@ body{
   top: 1em;
   left:0.3em;
   cursor: crosshair;
-}
-
-cursor::backdrop{
-  color: #cc1022;
 }
 
 .apple:before {
@@ -45,4 +46,12 @@ cursor::backdrop{
   z-index: 2;
   top: -0.5em;
   left: 3em;
+}
+
+.pedra{
+  background: #000;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
 }

@@ -1,13 +1,13 @@
 
 var contarApple = 0; //CONTAR MAÇÃS COLETADAS
-var tempo = setInterval(60000 - 60000);
+var tempo = setTimeout(60000);
 
 function addApple(){
     //VARIAVEL PARA IMPRIMIR OS ELEMENTOS NA PAGINA HTML
     var apple = document.createElement('div');
     apple.setAttribute("class" , "apple");
 
-    var p1 = Math.floor(Math.random() * 1800);
+    var p1 = Math.floor(Math.random() * 1600);
     var p2 = Math.floor(Math.random() * 900);
 
     apple.setAttribute("style", "left:" +  p1 + "px; top:" + p2 + "px;");
@@ -15,8 +15,38 @@ function addApple(){
     document.body.appendChild(apple);
 }
 
+function addPedra(){
+    //VARIAVEL PARA IMPRIMIR OS ELEMENTOS PEDRA NA PAGINA HTML
+    var pedra = document.createElement('div');
+    pedra.setAttribute("class" , "pedra");
+
+    var p1 = Math.floor(Math.random() * 1600);
+    var p2 = Math.floor(Math.random() * 900);
+
+    pedra.setAttribute("style", "left:" +  p1 + "px; top:" + p2 + "px;");
+    pedra.setAttribute("onclick", "getPedra(this)"); 
+    document.body.appendChild(pedra);
+
+    //AS PEDRAS NÃO PODEM FICAR TODO O TEMPO TODO NA TELA, POR ISSO TEMOS A FUNÇÃO ABAIXO PARA FAZER O ELEMENTO PEDRA SUMIR DEPOIS DE 
+    setTimeout(function() { 
+        pedra.remove();
+    }, 4000);
+}
+
+function getPedra(finalizar){
+  var click = document.body.removeChild(finalizar);
+
+  if(click = 1){
+    alert("Fim de jogo!")
+    window.location.reload();
+  }
+}
+
+function pedras (){
+    setInterval(addPedra, 500);
+}
+
 function getConta(){
-    console.log("Maçãs coletadas" + contarApple);
     var pontuacao = document.getElementById('pontuacao'); ////CONTINUAR CODIGO A PARTIR DAQ
     pontuacao.textContent = "Maças coletadas: " + contarApple; //PARA MOSTRAR A PONTUAÇÃO DO JOGADOR AO LONGO DO JOGO
 }
@@ -30,7 +60,9 @@ function getApple(el){
     if(contarApple == 10){
         setInterval(addApple, 760);
     }else if(contarApple == 30){
-        setInterval(addApple, 745)
+        setInterval(addApple, 750)
+    }else if(contarApple == 50){
+        pedras();
     }else{
 
     }
@@ -39,7 +71,5 @@ function getApple(el){
 //FUNÇÃO PARA FAZER O FUNCIONAMENTO DO JOGO QUANDO APERTAR O BOÃO START
 function start(){
     setInterval(addApple, 850); //VELOCIDADE PADRAO DO JOGO
+    document.querySelector('#iniciate').style.display = 'none'; //FUNÇÃO PARA FAZER O BOTAO DE INICIAR SUMIR AO COMEÇAR O JOGO
 }
-
-
-
