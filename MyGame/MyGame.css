@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body{
-    background-image: url(imgsMyGame/FundodeGrama.jpeg) no-repeat;
-    font-family: 'Press Start 2P', cursive;
+body{ 
+  font-family: 'Press Start 2P', cursive;
 }
 
-.caixaPontuacao
+.buttonStart, .backIndex{
+  padding: 1em;
+}
 
-.buttonStart{
-  position:absolute;
-  top: 500px;
-  right:923px;
+.caixaPontuacao{
+  padding: 20px; 
+  float: left;
 }
 
 .apple {

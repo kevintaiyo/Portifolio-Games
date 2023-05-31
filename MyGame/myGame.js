@@ -1,18 +1,46 @@
 
 var contarApple = 0; //CONTAR MAÇÃS COLETADAS
-var tempo = setTimeout(60000);
+
+function cronometro() {
+    var tempoInicial = Date.now(); // Obter o tempo inicial em milissegundos
+    var display = document.getElementById('tempo'); // Obter elemento HTML para exibição do cronômetro
+    var tempoTotal = 60; // Definir o tempo total em segundos
+    
+    var intervalo = setInterval(function() {
+      var tempoAtual = Date.now(); // Obter o tempo atual em milissegundos
+      var tempoPassado = tempoAtual - tempoInicial; // Calcular o tempo passado em milissegundos
+      
+      // Converter o tempo passado para segundos restantes
+      var segundosRestantes = tempoTotal - Math.floor(tempoPassado / 1000);
+      
+      // Atualizar o conteúdo do elemento HTML
+      display.innerHTML = 'Tempo Restante: ' +  segundosRestantes + ' segundos';
+      
+      // Verificar se o tempo chegou a zero
+      if (segundosRestantes <= 0) {
+        clearInterval(intervalo); // Parar o cronômetro
+        alert("Fim de jogo, Tempo Esgotado");
+        window.location.reload();
+      }
+    }, 1000); // Atualizar a cada segundo (1000 milissegundos)
+  }
 
 function addApple(){
     //VARIAVEL PARA IMPRIMIR OS ELEMENTOS NA PAGINA HTML
     var apple = document.createElement('div');
     apple.setAttribute("class" , "apple");
 
-    var p1 = Math.floor(Math.random() * 1600);
-    var p2 = Math.floor(Math.random() * 900);
+    var p1 = Math.floor(Math.random() * 500);
+    var p2 = Math.floor(Math.random() * 500);
 
     apple.setAttribute("style", "left:" +  p1 + "px; top:" + p2 + "px;");
     apple.setAttribute("onclick", "getApple(this)"); 
     document.body.appendChild(apple);
+
+    //AS MAÇÃS NÃO VÃO FICAR O TEMPO TODO NA TELA, PARA DIFICULTAR UM POUCO O JOGADOR
+    setTimeout(function() { 
+        apple.remove();
+    }, 5000);
 }
 
 function addPedra(){
@@ -20,8 +48,8 @@ function addPedra(){
     var pedra = document.createElement('div');
     pedra.setAttribute("class" , "pedra");
 
-    var p1 = Math.floor(Math.random() * 1600);
-    var p2 = Math.floor(Math.random() * 900);
+    var p1 = Math.floor(Math.random() * 1500);
+    var p2 = Math.floor(Math.random() * 500);
 
     pedra.setAttribute("style", "left:" +  p1 + "px; top:" + p2 + "px;");
     pedra.setAttribute("onclick", "getPedra(this)"); 
@@ -30,7 +58,7 @@ function addPedra(){
     //AS PEDRAS NÃO PODEM FICAR TODO O TEMPO TODO NA TELA, POR ISSO TEMOS A FUNÇÃO ABAIXO PARA FAZER O ELEMENTO PEDRA SUMIR DEPOIS DE 
     setTimeout(function() { 
         pedra.remove();
-    }, 4000);
+    }, 8000);
 }
 
 function getPedra(finalizar){
@@ -71,5 +99,6 @@ function getApple(el){
 //FUNÇÃO PARA FAZER O FUNCIONAMENTO DO JOGO QUANDO APERTAR O BOÃO START
 function start(){
     setInterval(addApple, 850); //VELOCIDADE PADRAO DO JOGO
-    document.querySelector('#iniciate').style.display = 'none'; //FUNÇÃO PARA FAZER O BOTAO DE INICIAR SUMIR AO COMEÇAR O JOGO
+    document.querySelector('#menuJogo').style.display = 'none'; //FUNÇÃO PARA FAZER O BOTAO DE INICIAR E VOLTAR SUMIR, AO COMEÇAR O JOGO
+    cronometro(); //CRONOMETRO PARA DAR FIM NO JOGO 
 }
