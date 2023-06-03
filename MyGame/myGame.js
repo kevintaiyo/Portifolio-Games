@@ -30,7 +30,7 @@ function addApple(){
     var apple = document.createElement('div');
     apple.setAttribute("class" , "apple");
 
-    var p1 = Math.floor(Math.random() * 500);
+    var p1 = Math.floor(Math.random() * 1500);
     var p2 = Math.floor(Math.random() * 500);
 
     apple.setAttribute("style", "left:" +  p1 + "px; top:" + p2 + "px;");
@@ -99,6 +99,6 @@ function getApple(el){
 //FUNÇÃO PARA FAZER O FUNCIONAMENTO DO JOGO QUANDO APERTAR O BOÃO START
 function start(){
     setInterval(addApple, 850); //VELOCIDADE PADRAO DO JOGO
-    document.querySelector('#menuJogo').style.display = 'none'; //FUNÇÃO PARA FAZER O BOTAO DE INICIAR E VOLTAR SUMIR, AO COMEÇAR O JOGO
+    document.querySelector('#menu').style.display = 'none'; //FUNÇÃO PARA FAZER O BOTAO DE INICIAR E VOLTAR SUMIR, AO COMEÇAR O JOGO
     cronometro(); //CRONOMETRO PARA DAR FIM NO JOGO 
 }
