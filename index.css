@@ -2,11 +2,17 @@
 /* MEU CSS */
 body{
   background-color: #000;
+  background-image: url(imgs/Back.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #fff;
   font-family: 'Press Start 2P', cursive;
 }
+
 .titulo, footer{
- padding-top: 100px;
+ padding-top: 2em;
+ padding-bottom: 2em;
 }
 
 .inputsJogos{
@@ -14,20 +20,22 @@ body{
   justify-content: space-around;
 }
 
-.cards{
-padding: 10px 10px 10px 10px;
-}
-
-.linksJogos{
-  text-decoration: none;
-}
-
 @media (max-width: 950px){
-.inputsJogos{
+.inputsJogos, .card{
     align-items: center;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 10px all;
  }
+
+ body{
+  background-color: #000;
+  background-image: url(imgs/back2Celphone.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+}
 }
 
 /* MEU CSS */
@@ -163,14 +171,14 @@ padding: 10px 10px 10px 10px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bolder;
 }
 
 .linksJogos{
   text-decoration: none;
-  color: #8B5AD5;
-  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
+  color: #000;
 }
 
 .linksJogos:hover{
@@ -184,7 +192,7 @@ p {
   align-items: center;
   justify-content: center;
   width: 320px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   padding: 32px;
   overflow: hidden;
   border-radius: 10px;
