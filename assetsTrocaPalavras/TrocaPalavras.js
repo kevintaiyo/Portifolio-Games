@@ -12,5 +12,9 @@ function trocar(){
     document.getElementById("filme3").innerHTML = newword;
     document.getElementById("filme4").innerHTML = newword;
     document.getElementById("filme5").innerHTML = newword;
+    document.getElementById("filme6").innerHTML = newword;
+    document.getElementById("filme7").innerHTML = newword;
+    document.getElementById("filme8").innerHTML = newword;
+    document.getElementById("filme9").innerHTML = newword;
 }
 

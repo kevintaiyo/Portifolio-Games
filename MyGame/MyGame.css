@@ -7,11 +7,19 @@ body{
   background-size: cover;
 }
 
+a{
+  text-decoration: none;
+  color: #000;
+}
+
 .buttonStart, .backIndex{
+  font-family: 'Press Start 2P', cursive;
   padding: 1em;
-  background-color: #000;
-  color: #fff;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   border: none;
+  text-decoration: none;
+  border-radius: 1em;
 }
 
 .caixaPontuacao{
@@ -55,7 +63,7 @@ body{
 }
 
 .pedra{
-  background: #000;
+  background: rgb(102, 102, 102);
   border-radius: 50%;
   width: 100px;
   height: 100px;

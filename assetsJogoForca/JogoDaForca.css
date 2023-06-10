@@ -3,6 +3,10 @@ body{
     background: rgb(113, 181, 224);
     margin: 0;
     font-family: 'Press Start 2P', cursive;
+    background-image: url(../imgs/Back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 button{
@@ -52,3 +56,8 @@ button:disabled{
     height: 55%;
     float: right;
 }
+
+#tabAcerto, #tema{
+    color: #fff;
+}
+

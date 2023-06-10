@@ -19,7 +19,7 @@ function cronometro() {
       // Verificar se o tempo chegou a zero
       if (segundosRestantes <= 0) {
         clearInterval(intervalo); // Parar o cronômetro
-        alert("Fim de jogo, Tempo Esgotado");
+        alert("Fim de jogo, Tempo Esgotado, Sua pontuação é de = " + contarApple + " pontos");
         window.location.reload();
       }
     }, 1000); // Atualizar a cada segundo (1000 milissegundos)
@@ -65,7 +65,7 @@ function getPedra(finalizar){
   var click = document.body.removeChild(finalizar);
 
   if(click = 1){
-    alert("Fim de jogo!")
+    alert("Fim de jogo!, Sua pontuação é de = " + contarApple + " pontos")
     window.location.reload();
   }
 }

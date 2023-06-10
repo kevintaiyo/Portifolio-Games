@@ -40,7 +40,7 @@ body{
 
 /* MEU CSS */
 .pyramid-loader {
-    position: relative;
+
     width: 300px;
     height: 300px;
     display: block;
@@ -191,9 +191,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 320px;
+  width: 270px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  padding: 32px;
+  padding: 30px;
   overflow: hidden;
   border-radius: 10px;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
