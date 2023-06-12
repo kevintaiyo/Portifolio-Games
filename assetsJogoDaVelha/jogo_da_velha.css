@@ -47,7 +47,7 @@ img{
     font-weight: bold;
 }
 
-input[type=button], input[type=submit], input[type=reset]{
+input[type=button], input[type=submit], input[type=reset], .btnNovoJogo{
     background-color: rgb(55, 42, 59);
     background-image: linear-gradient(to bottom, #d39d56, #ce5d12);
     border-radius: 20px;
@@ -64,8 +64,13 @@ input[type=button], input[type=submit], input[type=reset]{
     cursor: pointer;
 }
 
-input[type=button]:hover{
+input[type=button]:hover, .btnNovoJogo:hover{
     background: rgb(255, 255, 255);
     background-image: linear-gradient(to bottom, #000000, #ac7e39);
     text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
 }

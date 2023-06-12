@@ -31,7 +31,7 @@ function addApple(){
     apple.setAttribute("class" , "apple");
 
     var p1 = Math.floor(Math.random() * 1500);
-    var p2 = Math.floor(Math.random() * 500);
+    var p2 = Math.floor(Math.random() * 800);
 
     apple.setAttribute("style", "left:" +  p1 + "px; top:" + p2 + "px;");
     apple.setAttribute("onclick", "getApple(this)"); 
@@ -40,7 +40,7 @@ function addApple(){
     //AS MAÇÃS NÃO VÃO FICAR O TEMPO TODO NA TELA, PARA DIFICULTAR UM POUCO O JOGADOR
     setTimeout(function() { 
         apple.remove();
-    }, 5000);
+    }, 4000);
 }
 
 function addPedra(){
@@ -49,7 +49,7 @@ function addPedra(){
     pedra.setAttribute("class" , "pedra");
 
     var p1 = Math.floor(Math.random() * 1500);
-    var p2 = Math.floor(Math.random() * 500);
+    var p2 = Math.floor(Math.random() * 800);
 
     pedra.setAttribute("style", "left:" +  p1 + "px; top:" + p2 + "px;");
     pedra.setAttribute("onclick", "getPedra(this)"); 
@@ -71,7 +71,7 @@ function getPedra(finalizar){
 }
 
 function pedras (){
-    setInterval(addPedra, 500);
+    setInterval(addPedra, 400);
 }
 
 function getConta(){

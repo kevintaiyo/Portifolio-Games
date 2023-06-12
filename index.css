@@ -20,11 +20,12 @@ body{
   justify-content: space-around;
 }
 
-@media (max-width: 950px){
+@media (max-width: 1580px){
 .inputsJogos, .card{
     align-items: center;
     flex-wrap: wrap;
-    padding: 10px all;
+    padding: 0.375em all;
+    margin: 2.5em;
  }
 
  body{
